@@ -35,6 +35,8 @@ button[type=submit] {
 
 button[type=submit]:hover {
   background-color: #d5fb6c;
+  font-size: larger;
+  color: #69451b;
 }
 
 div {
