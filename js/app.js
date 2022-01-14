@@ -25,7 +25,13 @@ console.log('form submission values', event.target.who.value);
 console.log('form submission values', event.target.message.value);
 
 
+//add submission validation
+if(!event.target.who.value || !event.target.message.value){
+  return alert('Looks like we\'ve got another mystery on our hands');
 }
+
+}//closes function
+
 
 
 
