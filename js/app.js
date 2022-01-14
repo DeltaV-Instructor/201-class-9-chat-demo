@@ -2,6 +2,12 @@
 console.log('app.js connected!');
 
 //add global variables to access the DOM
+let chatForm = document.getElementById('chat-form');
+let chatList = document.getElementById('chat-list');
+let chatClear = document.getElementById('chat-clear');
+
+ 
+
 
 //add constructor function for chat objects
 
