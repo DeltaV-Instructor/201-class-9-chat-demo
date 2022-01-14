@@ -54,16 +54,11 @@ function handleChatSubmit(event){
 
   let newComment = new Comment(whoCommented, messagePost);
   console.log('new comment object',newComment);
+  console.log('current user: ' + event.target.who.value + ' at ' + Date());
 
-
-
-
-
-
-
-
-
-
+  //reset our event targets.
+  event.target.who.value = null;
+  event.target.message.value = null;
 
 
 
