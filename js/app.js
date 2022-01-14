@@ -21,6 +21,8 @@ this.text = text;
 function handleChatSubmit(event){
 console.log('button click:',event);
 event.preventDefault();
+console.log('form submission values', event.target.who.value);
+console.log('form submission values', event.target.message.value);
 
 
 }
