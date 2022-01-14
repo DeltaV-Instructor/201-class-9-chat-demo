@@ -14,7 +14,33 @@ let chatClear = document.getElementById('chat-clear');
 //add prototype method to build chat elements for the render method 
 
 //add handle submit render function 
+function handleChatSubmit(event){
+console.log('button click:',event);
+event.preventDefault();
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //add eventlistener to the form submit button 
+chatForm.addEventListener('submit', handleChatSubmit);
+
+
+
 
 //add to clear chat list 
