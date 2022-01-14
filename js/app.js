@@ -3,7 +3,7 @@ console.log('app.js connected!');
 
 //add global variables to access the DOM
 let chatForm = document.getElementById('chat-form');
-// let chatList = document.getElementById('chat-list');
+let chatList = document.getElementById('chat-list');
 let chatClear = document.getElementById('chat-clear');
 let allMessage = [];
 
@@ -17,6 +17,32 @@ function Comment(userName, text){
 }
 
 //add prototype method to build chat elements for the render method
+Comment.prototype.render = function(){
+  let listItem = document.createElement('li');
+  listItem.innerHTML = '<img src="image/ ' + this.userName + '.jpg" /><b>' + this.userName + ': </b><em>' + this.text + '</em>';
+
+  console.log('list item',listItem);
+
+  return listItem;
+};
+
+
+
+//add function to render all the comments
+let renderAllMessages = function(){
+
+
+  for(let i = 0; i < allMessage.length; i++){
+    console.log('chat loggin', allMessage[i]);
+  }
+
+
+
+};
+
+
+
+
 
 //add handle submit render function
 function handleChatSubmit(event){
@@ -61,7 +87,10 @@ function handleChatSubmit(event){
   event.target.who.value = null;
   event.target.message.value = null;
 
-allMessage.push(newComment);
+  allMessage.push(newComment);
+
+  //render new object
+  renderAllMessages();
 
 }//closes function
 
