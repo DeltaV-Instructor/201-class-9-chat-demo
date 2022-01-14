@@ -10,6 +10,10 @@ let chatClear = document.getElementById('chat-clear');
 
 
 //add constructor function for chat objects
+function Comment(userName, text){
+this.userName = userName;
+this.text = text;
+}
 
 //add prototype method to build chat elements for the render method 
 
