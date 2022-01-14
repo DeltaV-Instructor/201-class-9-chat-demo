@@ -37,10 +37,13 @@ event.preventDefault();
 
 
 
-//add eventlistener to the form submit button 
+//add SUBMIT EVENT eventlistener to the form submit button 
 chatForm.addEventListener('submit', handleChatSubmit);
 
 
 
 
-//add to clear chat list 
+//add CLICK EVENT to clear chat list 
+chatClear.addEventListener('click', function(){
+console.log('clickin on clear chat button!');
+});
