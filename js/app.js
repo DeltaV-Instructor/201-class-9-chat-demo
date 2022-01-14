@@ -19,10 +19,8 @@ function Comment(userName, text){
 //add prototype method to build chat elements for the render method
 Comment.prototype.render = function(){
   let listItem = document.createElement('li');
-  listItem.innerHTML = '<img src="image/ ' + this.userName + '.jpg" /><b>' + this.userName + ': </b><em>' + this.text + '</em>';
-
+  listItem.innerHTML = '<img width="100px" height="100px" src="images/' + this.userName + '.png" /><b>' + this.userName + ': </b><em>' + this.text + '</em>';
   console.log('list item',listItem);
-
   return listItem;
 };
 
@@ -30,14 +28,12 @@ Comment.prototype.render = function(){
 
 //add function to render all the comments
 let renderAllMessages = function(){
-
-
+  chatList.innerHTML = '';
   for(let i = 0; i < allMessage.length; i++){
-    console.log('chat loggin', allMessage[i]);
+    // console.log('chat loggin', allMessage[i]);
+    //call to build our html and pin to our chatList
+    chatList.appendChild(allMessage[i].render());
   }
-
-
-
 };
 
 
@@ -120,4 +116,6 @@ chatForm.addEventListener('submit', handleChatSubmit);
 //add CLICK EVENT to clear chat list
 chatClear.addEventListener('click', function(){
   console.log('clickin on clear chat button!');
+  allMessage = [];
+  chatList.innerHTML ='';
 });
