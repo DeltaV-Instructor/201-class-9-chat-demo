@@ -5,6 +5,7 @@ console.log('app.js connected!');
 let chatForm = document.getElementById('chat-form');
 // let chatList = document.getElementById('chat-list');
 let chatClear = document.getElementById('chat-clear');
+let allMessage = [];
 
 
 
@@ -60,7 +61,7 @@ function handleChatSubmit(event){
   event.target.who.value = null;
   event.target.message.value = null;
 
-
+allMessage.push(newComment);
 
 }//closes function
 
