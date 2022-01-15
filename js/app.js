@@ -37,9 +37,6 @@ let renderAllMessages = function(){
 };
 
 
-
-
-
 //add handle submit render function
 function handleChatSubmit(event){
   console.log('button click:',event);
