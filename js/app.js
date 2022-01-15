@@ -30,8 +30,15 @@ Comment.prototype.render = function(){
 let renderAllMessages = function(){
   chatList.innerHTML = '';
   for(let i = 0; i < allMessage.length; i++){
-    // console.log('chat loggin', allMessage[i]);
+    console.log('chat loggin', allMessage[i]);
     //call to build our html and pin to our chatList
+    if(allMessage[i] % 2 === 0){
+      console.log('even');
+      // allMessage[i].style.cssFloat = 'left';
+    } else {
+      console.log('odd');
+      // allMessage[i].style.cssFloat = 'right';
+    }
     chatList.appendChild(allMessage[i].render());
   }
 };
